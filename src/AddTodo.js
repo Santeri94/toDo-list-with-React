@@ -6,18 +6,9 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 
-// täällä hoidetaan todo iteemien lisääminen otetaan propsit parametrinä jotta saadaan addTodo functio käyttöön tänne
-// addTodo hoitaa siis POST metodin databaseen
-// eka importataan buttonit/textfieldit/dialogit MUI librarysta niin saadaan UI komponentit käyttöö
-// sit halutaan et ku painetaan add todo nappia et dialogi aukeaa sitten, state hoitamaan dialogin näkyvyyttä
-// todo:lle oma state
-// functiot handleopen=vaihtaa dialogin näkyvyyttä // handleclose=vaihtaa dialogin näkyvyyttä
-// functio handleSave=käyttää addTodo functioo ja laittaa siihen todon objectin ja sitten sulkee dialogin
-// savee siis objectin databaseen
-// inputChange hoitaa input fieldin valuen objectin atribuutteihin 
 
 function AddTodo(props) {
-const [open, setOpen] = useState(false);  // if value is false, dialog component is hidden
+const [open, setOpen] = useState(false);  
 const [todo, setTodo] = useState({description: '', date: '', priority: ''});
   
 const handleOpen = () => {
@@ -36,9 +27,6 @@ const handleSave = () => {
 const inputChanged = (event) => {
     setTodo({...todo, [event.target.name]: event.target.value});
   }
-
-// painaessa siis buttonia -> handleopen -> dialog=open (avaa uuden pienen ikkunan)->näyttää dialog titlen, contentin
-// ja dialog actionit = save & cancel (näissä omat functionit painaessa!)
   
   return(
     <div>
