@@ -1,4 +1,5 @@
 # Link to app: https://santeri94.github.io/toDo-list-with-React/
+# Firebase test database is expired
 
 # Getting Started with Create React App
 
